@@ -5,11 +5,11 @@ $(document).ready(function() {
     var appname = $('#appname').val();
     $('#appname').val("")
     var author = $('#author').val();
-    var $('#author').val("");
+    $('#author').val("");
     var contact = $('#contact').val();
-    var $('#contact').val("");
+    $('#contact').val("");
     var descrip = $('#descrip').val();
-    var $('#descrip').val("");
+    $('#descrip').val("");
     var votes = 1;
     var locDataRef = new Firebase('https://mks4projideas.firebaseio.com/'+appname.replace(/ /g, ''));
     locDataRef.child('appname').set(appname);
