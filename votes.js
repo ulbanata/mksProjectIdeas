@@ -3,9 +3,13 @@ $(document).ready(function() {
   $('#submit').on('click', function() {
   //   if (e.keyCode == 13 && $('#location').val() != '') {
     var appname = $('#appname').val();
+    $('#appname').val("")
     var author = $('#author').val();
+    var $('#author').val("");
     var contact = $('#contact').val();
+    var $('#contact').val("");
     var descrip = $('#descrip').val();
+    var $('#descrip').val("");
     var votes = 1;
     var locDataRef = new Firebase('https://mks4projideas.firebaseio.com/'+appname.replace(/ /g, ''));
     locDataRef.child('appname').set(appname);
