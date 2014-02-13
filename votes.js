@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var DataRef = new Firebase('https://mks4projideas.firebaseio.com/');
+
   $('#submit').on('click', function() {
   //   if (e.keyCode == 13 && $('#location').val() != '') {
     var appname = $('#appname').val();
@@ -12,6 +13,7 @@ $(document).ready(function() {
     $('#descrip').val("");
     var votes = 1;
     var locDataRef = new Firebase('https://mks4projideas.firebaseio.com/'+appname.replace(/ /g, ''));
+    //nameRef.set({appname : appname});
     locDataRef.child('appname').set(appname);
     locDataRef.child('author').set(author);
     locDataRef.child('contact').set(contact);
